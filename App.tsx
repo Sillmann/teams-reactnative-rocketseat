@@ -22,6 +22,8 @@ export default function App() {
 
       { fontsLoaded ? <Groups /> : <Loading /> } 
 
+      
+     
     </ThemeProvider>
   );
 }
