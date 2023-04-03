@@ -8,6 +8,7 @@ export const Container = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 `;
 
 export const Logo = styled.Image`
@@ -21,6 +22,6 @@ export const BackButton = styled.TouchableOpacity`
 
 export const BackIcon = styled(CaretLeft).attrs(({ theme }) => ({
   size: 32,
-  color: theme.COLORS.WHITE				
+  color: theme.COLORS.WHITE		
 }))``;
 
