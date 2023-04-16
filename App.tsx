@@ -8,6 +8,8 @@ import { ActivityIndicator, StatusBar } from 'react-native';
 
 import { Loading } from '@components/Loading';
 
+import { Routes } from './src/routes';
+
 
 export default function App() {
 
@@ -22,7 +24,7 @@ export default function App() {
         translucent
       />
 
-      { fontsLoaded ? <Players /> : <Loading /> } 
+      { fontsLoaded ? <Routes /> : <Loading /> } 
 
       
      
