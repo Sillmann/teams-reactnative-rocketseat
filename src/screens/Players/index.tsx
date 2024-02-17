@@ -17,6 +17,7 @@ import { PlayerStorageDTO } from "@storage/player/PlayerStorageDTO";
 import { playerRemoveByGroup } from "@storage/player/playerRemoveByGroup";
 import { groupRemoveByName } from '@storage/group/groupRemoveByName';
 import { Loading } from "@components/Loading";
+import { playersGetByGroup } from '@storage/player/playersGetByGroup';
 
 type RouteParams = {
   group: string;
@@ -28,6 +29,8 @@ export function Players(){
   const [newPlayerName,setNewPlayerName] = useState('');
   const [team,setTeam] = useState('Time A');
   const [players,setPlayers] = useState<PlayerStorageDTO[]>([]);
+  const [totPlayers,setTotPlayers] = useState<PlayerStorageDTO[]>([]);
+  const [addPlayers,setAddPlayers] = useState<PlayerStorageDTO[]>([]);
 
   const navigation = useNavigation();
 
@@ -37,15 +40,21 @@ export function Players(){
 
   const newPlayerNameInputRef = useRef<TextInput>(null);
 
+  const newPlayer = {
+     name: newPlayerName,
+     team,
+  }
+
+
   async function handleAddPlayer(){
     if (newPlayerName.trim().length === 0){
       return Alert.alert('Nova pessoa','Informe o nome da pessoa para adicionar.');
     }
 
-    const newPlayer = {
-      name: newPlayerName,
-      team,
-    }
+    // const newPlayer = {
+    //   name: newPlayerName,
+    //   team,
+    // }
 
     try {
       
@@ -195,7 +204,7 @@ export function Players(){
         type="SECONDARY"
         onPress={handleGroupRemove}
       />
-      
+               
     </Container>
   )
 }

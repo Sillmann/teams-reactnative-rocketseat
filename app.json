@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "rn_igniteteams",
-    "slug": "rn_igniteteams",
+    "name": "teams",
+    "slug": "teams",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/img/icon.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/img/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,16 +20,19 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
-      "package": "com.ssilman.rn_igniteteams"
+      "package": "com.ssilman.teams"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      "expo-font"
+    ],
     "extra": {
       "eas": {
-        "projectId": "76443a1b-650b-439f-82e8-535841757533"
+        "projectId": "3337491e-3d06-4235-a54c-82db9746b59c"
       }
     }
   }
